@@ -1,0 +1,74 @@
+### git worktree list
+C:/Users/Asus/Desktop/rag-project/ticketrush              3152460 [main]
+C:/Users/Asus/Desktop/rag-project/ticketrush-early-access 804cdd4 [feature/early-access]
+C:/Users/Asus/Desktop/rag-project/ticketrush-hotfix       6079823 [hotfix/price-canonical]
+C:/Users/Asus/Desktop/rag-project/ticketrush-noa-review   cad0025 [review/noa-refund]
+C:/Users/Asus/Desktop/rag-project/ticketrush-noa-source   f7e8785 [review/noa-source]
+C:/Users/Asus/Desktop/rag-project/ticketrush-security     6557f4c [security/remove-api-key]
+C:/Users/Asus/Desktop/rag-project/ticketrush-waitlist     1ed8a7b [feature/waitlist]
+
+### git branch -a -vv
++ feature/early-access      804cdd4 (C:/Users/Asus/Desktop/rag-project/ticketrush-early-access) merge: include student promotion
++ feature/waitlist          1ed8a7b (C:/Users/Asus/Desktop/rag-project/ticketrush-waitlist) feat: add email waitlist
+  hotfix/price              8fec8a1 Revert: restore accurate price formatting
++ hotfix/price-canonical    6079823 (C:/Users/Asus/Desktop/rag-project/ticketrush-hotfix) Revert "perf: faster price formatting"
+* main                      3152460 [origin/main: ahead 15] merge: record standard price-format revert
++ review/noa-refund         cad0025 (C:/Users/Asus/Desktop/rag-project/ticketrush-noa-review) [origin/noa/refund: ahead 1] review: flag service fee refund bug
++ review/noa-source         f7e8785 (C:/Users/Asus/Desktop/rag-project/ticketrush-noa-source) [origin/noa/refund] test: refund tests
++ security/remove-api-key   6557f4c (C:/Users/Asus/Desktop/rag-project/ticketrush-security) security: remove payment key from tracked config
+  remotes/origin/HEAD       -> origin/main
+  remotes/origin/dana/promo d4b1e35 test: add student discount tests
+  remotes/origin/main       6e5b25d feat: friendlier message for empty quantity
+  remotes/origin/noa/refund f7e8785 test: refund tests
+  remotes/origin/ruth/fixes fee9f58 wip: try new fonts
+
+### git log --graph --oneline --all -n 80
+*   3152460 (HEAD -> main, tag: v1.1) merge: record standard price-format revert
+|\  
+| * 6079823 (hotfix/price-canonical) Revert "perf: faster price formatting"
+* |   981db36 merge: launch early-access pricing
+|\ \  
+| * \   804cdd4 (feature/early-access) merge: include student promotion
+| |\ \  
+| | * | d4b1e35 (origin/dana/promo) test: add student discount tests
+| | * | 0841085 feat: student discount (15%)
+| | |/  
+| * | aa5a608 feat: add member and student pricing
+| * | bffca29 feat: add member early-access pricing
+| |/  
+* |   79cf906 merge: add waitlist feature
+|\ \  
+| * | 1ed8a7b (feature/waitlist) feat: add email waitlist
+| |/  
+* |   f328e6d merge: remove tracked payment key
+|\ \  
+| * | 6557f4c (security/remove-api-key) security: remove payment key from tracked config
+* | | a2cc878 fix: correct concert date in events.js
+|/ /  
+* |   19aa772 merge: restore accurate price formatting
+|\ \  
+| |/  
+|/|   
+| * 8fec8a1 (hotfix/price) Revert: restore accurate price formatting
+|/  
+| * cad0025 (review/noa-refund) review: flag service fee refund bug
+| * f7e8785 (origin/noa/refund, review/noa-source) test: refund tests
+| * 61bfedd feat: refund calculation for cancelled orders
+|/  
+| * fee9f58 (origin/ruth/fixes) wip: try new fonts
+| * 72063d7 debug: dump state to console
+| * 20cd6a9 WIP: try removing ticket limits
+| * 8284d98 fix: correct concert date in events.js
+| * 339324e WIP: new checkout flow (do not merge)
+|/  
+* 6e5b25d (origin/main, origin/HEAD) feat: friendlier message for empty quantity
+* 9119fe2 fix: typo in hero heading
+* a61f4ad feat: add footer with links
+* 73924c4 perf: faster price formatting
+* 03bd4dd docs: update artist lineup text
+* c44fbf8 feat: add early-access promo banner
+* 62f48b5 (tag: v1.0) feat: purchase page UI
+* f4c58bc feat: payment provider config
+* 2cc7e97 feat: event details data
+* 8a944f6 feat: ticket price calculation with tests
+* ed1b1e9 Initial commit: project skeleton and exercise tooling
